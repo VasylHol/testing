@@ -32,7 +32,7 @@ describe('TodoMVC', function() {
 
   it('Lets you check off a todo', function() {
     // Enter a new todo.
-    cy.get('.new-todo').type('A thing to buy {enter}')
+    cy.get('.new-todo').type('A thing to buy 1 {enter}')
     cy.get('.todo-count').should('contain', '1 item left')
 
     // Click it off -- it should be marked as completed.
