@@ -17,3 +17,9 @@ jobs:
         run: npm install
       - name: percy tests
         run: npm test
+      - name: cypress start
+        run: start:server
+      - name: cypress visual tests
+        run: cypress:open
+      - name: cypress functional test
+        run: cypress:run
