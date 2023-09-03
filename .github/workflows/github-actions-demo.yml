@@ -15,9 +15,11 @@ jobs:
           node-version: ${{ matrix.node-version }}
       - name: install modules
         run: npm install
-      # - name: percy tests
-      #   run: npm test
-      # - name: cypress visual tests
-      #   run: cypress:open
+      - name: percy tests
+        run: npm test
+      - name: cypress start
+        run: npm run start:server
+      - name: cypress visual tests
+        run: npm run cypress:open
       - name: cypress functional test
-        run: cypress:run
+        run: npm run cypress:run
